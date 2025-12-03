@@ -163,10 +163,14 @@ from google.adk.models.google_llm import Gemini
 from google.adk.runners import InMemoryRunner
 from google.genai import types
 from google.genai.types import Content, Part
-# Vertex AI
-from vertexai import init
-from vertexai.generative_models import GenerativeModel
-from vertexai.language_models import TextEmbeddingModel
+# --- 1.2 Google AI (AI Studio) Imports ---
+import google.generativeai as genai
+from google.adk.models.google_llm import Gemini  # <--- CHANGED FROM VertexAI
+
+
+# Databases (Still requires GCP Credentials if used)
+from google.cloud import firestore
+import mysql.connector
 
 print("✅ ADK components imported successfully.")
 # =============================================================================
